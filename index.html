@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <link rel="stylesheet" href="css/main.css" />
+    <!--<link rel="stylesheet" href="../bower_components/ng-sortable/dist/ng-sortable.min.css" />-->
+    <!--<link rel="stylesheet" href="../bower_components/ng-sortable/dist/ng-sortable.style.min.css" />-->
+
+    <!--Models -->
+    <script src="models/inventory.js"></script>
+    <script src="models/item.js"></script>
+    <script src="lib/jquery.min.js"></script>
+    <script src="lib/angular.min.js"></script>
+    <script src="directives/mbInventory.js"></script>
+    <script src="custom_lib/sf-drag.js"></script>
+    <script src="controller/main.js"></script>
+</head>
+<body ng-app="main_app" ng-controller="main_controller">
+<div id="controlls">
+
+</div>
+<div id="inventorys">
+
+    <input type="text" ng-model="r1" placeholder="rows 1" />
+    <input type="text" ng-model="c1" placeholder="col 1" />
+    <mb-inventory inventory="inv" rows="r1" columns="c1"></mb-inventory>
+    Chest
+    <mb-inventory inventory="chest" rows="2" columns="5"></mb-inventory>
+    Only not Enchanted Weapons:
+    <mb-inventory inventory="weapon_not_enchanted" rows="2" columns="2"></mb-inventory>
+    Any Enchanted Weapon, no Axe:
+    <mb-inventory inventory="weapon_enchanted" rows="2" columns="2"></mb-inventory>
+</div>
+
+</body>
+</html>
